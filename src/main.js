@@ -167,6 +167,7 @@ async function getRelatedMoviesId(id){
     console.log(['RELATED MOVIES'], relatedMovies);
 
     createMovies(relatedMovies, relatedMoviesContainer)
+    // history.back(location.hash -1)
     // relatedMovies.forEach(movie => {
     //     console.log([movie])
 
