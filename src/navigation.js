@@ -5,6 +5,7 @@ searchFormBtn.addEventListener('click', ()=> {
     // location.hash = '#search=' + searchFormInput.value;
     const [_, query] = location.hash.split('=');
     historial.push(query);
+    console.log(['HISTOIAL'],query)
 
 })
 trendingBtn.addEventListener('click', ()=> {
@@ -129,13 +130,14 @@ function categoriesPage(){
 
 
 function movieDetailsPage(){
+    // window.scrollTo(0,0)
     console.log('Estás en Movies detail');
     headerSection.classList.add('header-container--long');
     // headerSection.style.background = '';
     arrowBtn.classList.remove('inactive');
     arrowBtn.classList.add('header-arrow--white');
     headerTitle.classList.add('inactive');
-    headerCategoryTitle.classList.remove('inactive');
+    headerCategoryTitle.classList.add('inactive');
     searchForm.classList.add('inactive');
 
     trendingPreviewSection.classList.add('inactive');
@@ -143,6 +145,23 @@ function movieDetailsPage(){
 
     genericSection.classList.add('inactive');
     movieDetailSection.classList.remove('inactive');
+    
+    // #movie, id
+    const [movie, idValue] = location.hash.split('=');
+    
+    // console.log(movie, decodeURI(searchValue))
+    console.log(movie, idValue)
+
+    //['categoryId', 'categoryName]
+    const [_, idMovie] = idValue.split('#');
+
+    console.log(idMovie)
+    // const newName2 = decodeURI(categoryName);
+    
+    // headerCategoryTitle.innerHTML = decodeURI((searchValue.toUpperCase()))
+    // getMoviesBySearch(decodeURI(searchValue))
+    
+    getMovieById(idMovie)
 }
 
 function searchPage(){
