@@ -142,7 +142,9 @@ button {
 } 
 
 .header-title {
-  margin-bottom: 16px;
+  font-size: 2rem;
+  margin-bottom: 2rempx;
+  margin: 3rem;
 }
 
 .header-arrow {
@@ -214,6 +216,16 @@ button {
   max-width: 150px;
 }
 
+.header-container .header-arrow{
+  background-color: rgba(128, 128, 128, 0.231);
+  color: chartreuse;
+  border: solid #7203c7c1;
+  border-radius: 50px;
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  text-align: center;
+}
 
 /* Categories */
 .category-container {
