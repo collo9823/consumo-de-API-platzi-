@@ -130,6 +130,8 @@ function categoriesPage(){
 
 
 function movieDetailsPage(){
+    window.scrollTo(0,0)
+
     // window.scrollTo(0,0)
     console.log('Estás en Movies detail');
     headerSection.classList.add('header-container--long');
@@ -193,6 +195,8 @@ function searchPage(){
     
 }
 function trendsPage(){
+    window.scrollTo(0,0)
+
     console.log('Estás en Trends');
     headerSection.classList.remove ('header-container--long');
     headerSection.style.background = '';
